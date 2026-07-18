@@ -1,0 +1,106 @@
+.signin-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.signin-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.signin-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}
+
+.signin-card h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.signin-subtitle {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.signin-error {
+  background-color: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.signin-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-card label {
+  text-align: left;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.signin-card input {
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  color: var(--color-text);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.signin-card input:focus {
+  border-color: var(--color-primary);
+}
+
+.signin-card input:disabled {
+  opacity: 0.6;
+}
+
+.signin-card button {
+  margin-top: 28px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 13px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+
+.signin-card button:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.signin-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

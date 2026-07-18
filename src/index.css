@@ -1,0 +1,60 @@
+:root {
+  --color-bg: #0b0a0d;
+  --color-bg-glow: radial-gradient(ellipse 800px 500px at 50% -10%, rgba(120, 72, 30, 0.35), transparent 70%);
+  --color-surface: #17151c;
+  --color-surface-alt: #0f0d12;
+  --color-border: #2a2732;
+  --color-text: #f5f5f7;
+  --color-text-muted: #9b96a3;
+  --color-primary: #f97316;
+  --color-primary-hover: #ea6a0f;
+  --color-veg: #22c55e;
+  --color-nonveg: #ef4444;
+  --color-danger: #ef4444;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  background-image: var(--color-bg-glow);
+  background-repeat: no-repeat;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+.menu-page-placeholder,
+.fooddetail-page-placeholder,
+.savedrecipes-page-placeholder,
+.notfound-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+}
