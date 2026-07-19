@@ -1,0 +1,70 @@
+.savedrecipes-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px clamp(16px, 4vw, 48px) 64px;
+}
+
+.savedrecipes-topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.savedrecipes-topbar h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.savedrecipes-topbar p {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.saved-back-link {
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  font-size: 14px;
+}
+
+.saved-back-link:hover {
+  border-color: var(--color-text-muted);
+}
+
+.savedrecipes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.savedrecipes-empty-state {
+  margin-top: 80px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.savedrecipes-empty-state a {
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .savedrecipes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .savedrecipes-grid {
+    grid-template-columns: 1fr;
+  }
+}
