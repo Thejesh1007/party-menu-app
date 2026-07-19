@@ -1,0 +1,188 @@
+.fooddetail-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px clamp(16px, 4vw, 48px) 64px;
+}
+
+.fooddetail-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.back-to-menu {
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  font-size: 14px;
+}
+
+.back-to-menu:hover {
+  border-color: var(--color-text-muted);
+}
+
+.fooddetail-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fooddetail-saved-link {
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  font-size: 14px;
+}
+
+.fooddetail-saved-link:hover {
+  border-color: var(--color-text-muted);
+}
+
+.save-toggle {
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.save-toggle:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.save-toggle-saved {
+  background-color: transparent;
+  border-color: var(--color-veg);
+  color: var(--color-veg);
+}
+
+.save-toggle-saved:hover {
+  background-color: rgba(34, 197, 94, 0.08);
+}
+
+.fooddetail-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.fooddetail-image-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.fooddetail-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fooddetail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fooddetail-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-category {
+  background-color: rgba(249, 115, 22, 0.15);
+  color: var(--color-primary);
+}
+
+.badge-veg {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: var(--color-veg);
+}
+
+.badge-nonveg {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-nonveg);
+}
+
+.fooddetail-info h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.fooddetail-servings {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.fooddetail-description {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.fooddetail-ingredients h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ingredient-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.ingredient-quantity {
+  color: var(--color-text-muted);
+}
+
+.fooddetail-notfound {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 24px;
+}
+
+@media (max-width: 800px) {
+  .fooddetail-main {
+    grid-template-columns: 1fr;
+  }
+}

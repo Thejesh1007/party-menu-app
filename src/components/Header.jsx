@@ -1,20 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useSavedRecipes } from '../context/SavedRecipesContext';
 import './Header.css';
-
-function getSavedCount() {
-  try {
-    const raw = localStorage.getItem('party_menu_saved_recipes');
-    const parsed = raw ? JSON.parse(raw) : [];
-    return Array.isArray(parsed) ? parsed.length : 0;
-  } catch {
-    return 0;
-  }
-}
 
 function Header() {
   const { user, logout } = useAuth();
-  const savedCount = getSavedCount();
+  const { savedCount } = useSavedRecipes();
 
   return (
     <header className="app-header">
