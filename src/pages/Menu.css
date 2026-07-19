@@ -1,0 +1,35 @@
+.menu-page {
+  padding-bottom: 48px;
+}
+
+.menu-count {
+  margin: 20px clamp(16px, 4vw, 48px) 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 16px clamp(16px, 4vw, 48px) 0;
+}
+
+.menu-empty-state {
+  margin: 60px clamp(16px, 4vw, 48px) 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
