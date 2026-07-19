@@ -1,16 +1,60 @@
-# React + Vite
+# Party Menu Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive food discovery web app for browsing, filtering, and saving dishes from a curated party menu.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Live URL:** <!-- add your Vercel URL here after deployment -->
+- **Test credentials:** `admin@example.com` / `admin123`
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- React Router DOM 7
+- Vite 6
+- Plain CSS (no framework)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Sign-in against a live authentication API, with token and user data persisted in local storage
+- Protected `/` route — redirects unauthenticated users to `/signin`, and signed-in users away from `/signin`
+- Category and diet filtering, plus name search (triggered by the Search button)
+- Responsive menu grid with an empty state for no-match filters
+- Food detail page with hero image, category/diet badges, full description, servings, and ingredients
+- Save/unsave recipes, persisted in local storage, with a live badge count in the header
+- Dedicated Saved Recipes page with remove functionality and its own empty state
+- 404 page for unmatched routes
+
+## Project Structure
+src/
+├── components/       # Header, FilterBar, FoodCard, SavedRecipeCard, ProtectedRoute
+├── context/          # AuthContext, SavedRecipesContext
+├── data/             # Static menu data + filter/lookup functions
+├── pages/            # SignIn, Menu, FoodDetail, SavedRecipes, NotFound
+├── styles/           # Shared card styles
+├── App.jsx
+├── main.jsx
+└── index.css
+## Getting Started
+
+```bash
+git clone https://github.com/Thejesh1007/party-menu-app.git
+cd party-menu-app
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173` and sign in with the test credentials above.
+
+## Local Storage Keys
+
+| Data          | Key                         |
+|---------------|------------------------------|
+| Auth token    | `party_menu_token`           |
+| User data     | `party_menu_user`            |
+| Saved recipes | `party_menu_saved_recipes`   |
+
+## Notes
+
+- Menu data is static (`src/data/menuData.js`) — only sign-in calls a live API. No API key is required anywhere.
+- All 50 dishes intentionally share a single placeholder image, matching the provided dataset.
