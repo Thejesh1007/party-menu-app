@@ -4,7 +4,7 @@ A responsive food discovery web app for browsing, filtering, and saving dishes f
 
 ## Live Demo
 
-- **Live URL:** <!-- add your Vercel URL here after deployment -->
+- **Live URL:** https://party-menu-app-eta.vercel.app/
 - **Test credentials:** `admin@example.com` / `admin123`
 
 ## Tech Stack
